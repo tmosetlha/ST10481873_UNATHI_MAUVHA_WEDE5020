@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get involved with GreenRoots NPO. Volunteer at our community gardens, become a sponsor, or enquire about partnerships and donations.">
+    <meta name="keywords" content="volunteer, donate, sponsor, get involved, GreenRoots NPO, community garden, Johannesburg">
+    <meta name="author" content="GreenRoots NPO">
+    <title>Get Involved | GreenRoots NPO</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ======== HEADER SECTION ======== -->
+    <header>
+        <div class="logo-area">
+            <img src="images/LOGO.jpeg"
+                 srcset="images/LOGO.jpeg 1x, images/LOGO.jpeg 2x"
+                 alt="GreenRoots NPO Logo"
+                 class="logo"
+                 width="48" height="48">
+            <span class="org-name">GreenRoots NPO</span>
+        </div>
+
+        <!-- ======== NAVIGATION MENU ======== -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Our Programmes</a></li>
+                <li><a href="enquiry.html" class="active">Get Involved</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ======== MAIN CONTENT ======== -->
+    <main>
+
+        <!-- Page Banner -->
+        <section class="page-banner">
+            <h1>Get Involved</h1>
+            <p>Volunteer, sponsor, or partner — every contribution makes a difference.</p>
+        </section>
+
+        <!-- ======== INVOLVEMENT OPTIONS ======== -->
+        <section class="content-section">
+            <h2>Ways to Get Involved</h2>
+            <div class="cards-container">
+
+                <!-- Card: Volunteer -->
+                <div class="card">
+                    <img src="images/VOLUNTEER.jpeg"
+                         srcset="images/VOLUNTEER.jpeg 400w,
+                                 images/VOLUNTEER.jpeg 800w"
+                         sizes="(max-width: 768px) 100vw, 300px"
+                         alt="Volunteer hands working in the garden"
+                         loading="lazy">
+                    <h3>Volunteer</h3>
+                    <p>Join our weekend garden teams, assist with education workshops, or help with administrative tasks. All skill sets are welcome.</p>
+                </div>
+
+                <!-- Card: Become a Sponsor -->
+                <div class="card">
+                    <img src="images/SPONSOR.jpeg"
+                         srcset="images/SPONSOR.jpeg 400w,
+                                 images/SPONSOR.jpeg 800w"
+                         sizes="(max-width: 768px) 100vw, 300px"
+                         alt="Handshake representing a sponsorship partnership"
+                         loading="lazy">
+                    <h3>Become a Sponsor</h3>
+                    <p>Your financial contribution helps us establish new gardens, purchase tools, and fund education programmes across Johannesburg.</p>
+                </div>
+
+                <!-- Card: Corporate Partner -->
+                <div class="card">
+                    <img src="images/CORPORATE BUILDING.jpeg"
+                         srcset="images/CORPORATE BUILDING.jpeg 400w,
+                                 images/CORPORATE BUILDING.jpeg 800w"
+                         sizes="(max-width: 768px) 100vw, 300px"
+                         alt="Corporate building representing business partnerships"
+                         loading="lazy">
+                    <h3>Corporate Partner</h3>
+                    <p>Bring your team to volunteer, sponsor a garden site, or fund our school education programmes as part of your CSR commitments.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ======== ENQUIRY FORM ======== -->
+        <section class="form-section">
+            <h2>Enquiry Form</h2>
+            <p>Please complete the form below and a member of our team will respond within 2 business days.</p>
+
+            <!--
+                Enquiry form with client-side validation attributes.
+                This form collects volunteer, sponsor, and general enquiry information.
+                JavaScript validation will be added in Part 3.
+            -->
+            <form action="#" method="POST" id="enquiry-form" novalidate>
+
+                <!-- ---- Personal Details Section ---- -->
+                <fieldset>
+                    <legend>Personal Details</legend>
+
+                    <!-- Full Name -->
+                    <div class="form-group">
+                        <label for="full-name">Full Name <span class="required">*</span></label>
+                        <input type="text" id="full-name" name="full_name" placeholder="e.g. Nomsa Dlamini" required minlength="2" maxlength="100">
+                    </div>
+
+                    <!-- Email Address -->
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="e.g. nomsa@email.co.za" required>
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div class="form-group">
+                        <label for="phone">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="e.g. 082 123 4567" required pattern="[0-9\s\+\-]{10,15}">
+                    </div>
+
+                    <!-- Organisation (Optional) -->
+                    <div class="form-group">
+                        <label for="organisation">Organisation / Company (if applicable)</label>
+                        <input type="text" id="organisation" name="organisation" placeholder="e.g. Standard Bank, University of the Witwatersrand">
+                    </div>
+                </fieldset>
+
+                <!-- ---- Enquiry Type Section ---- -->
+                <fieldset>
+                    <legend>Type of Enquiry</legend>
+
+                    <!-- Enquiry Category -->
+                    <div class="form-group">
+                        <label for="enquiry-type">I would like to: <span class="required">*</span></label>
+                        <select id="enquiry-type" name="enquiry_type" required>
+                            <option value="" disabled selected>-- Select an option --</option>
+                            <option value="volunteer">Volunteer at a Garden</option>
+                            <option value="sponsor">Become a Sponsor</option>
+                            <option value="corporate">Corporate Partnership Enquiry</option>
+                            <option value="donate">Make a Donation</option>
+                            <option value="general">General Enquiry</option>
+                        </select>
+                    </div>
+
+                    <!-- Garden Location Preference -->
+                    <div class="form-group">
+                        <label for="location-preference">Preferred Garden Location (for volunteers):</label>
+                        <select id="location-preference" name="location_preference">
+                            <option value="" disabled selected>-- Select nearest location --</option>
+                            <option value="braamfontein">Braamfontein</option>
+                            <option value="soweto">Soweto</option>
+                            <option value="alexandra">Alexandra</option>
+                            <option value="sandton">Sandton</option>
+                            <option value="midrand">Midrand</option>
+                            <option value="any">Any Location</option>
+                        </select>
+                    </div>
+
+                    <!-- Availability (Checkboxes) -->
+                    <div class="form-group">
+                        <label>Availability (select all that apply):</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="availability" value="saturday"> Saturdays</label>
+                            <label><input type="checkbox" name="availability" value="sunday"> Sundays</label>
+                            <label><input type="checkbox" name="availability" value="weekday"> Weekdays</label>
+                            <label><input type="checkbox" name="availability" value="flexible"> Flexible</label>
+                        </div>
+                    </div>
+
+                    <!-- Hear About Us (Radio buttons) -->
+                    <div class="form-group">
+                        <label>How did you hear about us? <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="referral_source" value="social_media" required> Social Media</label>
+                            <label><input type="radio" name="referral_source" value="word_of_mouth"> Word of Mouth</label>
+                            <label><input type="radio" name="referral_source" value="google"> Google Search</label>
+                            <label><input type="radio" name="referral_source" value="school"> School / University</label>
+                            <label><input type="radio" name="referral_source" value="other"> Other</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- ---- Message Section ---- -->
+                <fieldset>
+                    <legend>Your Message</legend>
+
+                    <!-- Message -->
+                    <div class="form-group">
+                        <label for="message">Message / Additional Information <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tell us more about your interest, skills, or any questions you have..." required minlength="20" maxlength="1000"></textarea>
+                    </div>
+
+                    <!-- POPIA Consent -->
+                    <div class="form-group">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="popia_consent" value="yes" required>
+                            I consent to GreenRoots NPO storing and processing my personal information in accordance with the Protection of Personal Information Act (POPIA). <span class="required">*</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit" class="btn-primary">Submit Enquiry</button>
+                    <button type="reset" class="btn-secondary">Clear Form</button>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- ======== FOOTER ======== -->
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h4>GreenRoots NPO</h4>
+                <p>Reg No: 2018/045321/08</p>
+                <p>NPO Reg: 245-678</p>
+                <p>Growing communities since 2018.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Our Programmes</a></li>
+                    <li><a href="enquiry.html">Get Involved</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>Email: info@greenrootsnpo.org.za</p>
+                <p>Tel: +27 11 234 5678</p>
+                <p>Johannesburg, Gauteng, South Africa</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GreenRoots NPO. All Rights Reserved. | Reg. NPO 245-678</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
