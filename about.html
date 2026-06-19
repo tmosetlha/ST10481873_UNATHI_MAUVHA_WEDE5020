@@ -1,51 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ======== SEO META TAGS (Part 3) ======== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about GreenRoots NPO - our history, mission, vision, values, and the passionate team behind our community gardening initiatives in Johannesburg.">
-    <meta name="keywords" content="about GreenRoots NPO, mission, vision, team, history, community, Johannesburg">
+
+    <!-- Primary SEO Meta Tags -->
+    <meta name="description" content="Learn about GreenRoots NPO — our history, mission, vision, core values, and the passionate team behind our community gardening initiatives in Johannesburg.">
+    <meta name="keywords" content="about GreenRoots NPO, GreenRoots history, community garden mission, NPO Johannesburg team, urban gardening vision, environmental sustainability South Africa">
     <meta name="author" content="GreenRoots NPO">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2d6a4f">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About Us | GreenRoots NPO">
+    <meta property="og:description" content="Discover the story, mission, vision, and people behind GreenRoots NPO — Johannesburg's leading community gardening organisation.">
+    <meta property="og:image" content="images/Group members.jpeg">
+    <meta property="og:url" content="https://greenrootsnpo.netlify.app/about.html">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://greenrootsnpo.netlify.app/about.html">
+
     <title>About Us | GreenRoots NPO</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- ======== HEADER SECTION ======== -->
+    <!-- ======== HEADER ======== -->
     <header>
         <div class="logo-area">
-            <img src="images/LOGO.jpeg"
-                 srcset="images/LOGO.jpeg 1x, images/LOGO.jpeg 2x"
-                 alt="GreenRoots NPO Logo"
-                 class="logo"
-                 width="48" height="48">
+            <img src="images/LOGO.jpeg" alt="GreenRoots NPO Logo" class="logo">
             <span class="org-name">GreenRoots NPO</span>
         </div>
 
-        <!-- ======== NAVIGATION MENU ======== -->
-        <nav>
+        <!-- Hamburger Button -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- ======== NAVIGATION ======== -->
+        <nav id="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="about.html" class="active" aria-current="page">About Us</a></li>
                 <li><a href="services.html">Our Programmes</a></li>
                 <li><a href="enquiry.html">Get Involved</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <div class="header-actions">
+            <button class="btn-secondary modal-open" data-modal="login-modal" type="button">Login</button>
+            <button class="btn-primary modal-open" data-modal="register-modal" type="button">Register</button>
+        </div>
     </header>
 
     <!-- ======== MAIN CONTENT ======== -->
     <main>
 
         <!-- Page Banner -->
-        <section class="page-banner">
-            <h1>About GreenRoots NPO</h1>
+        <section class="page-banner" aria-labelledby="about-banner-heading">
+            <h1 id="about-banner-heading">About GreenRoots NPO</h1>
             <p>Our story, our people, our purpose.</p>
         </section>
 
         <!-- ======== OUR HISTORY ======== -->
-        <section class="content-section">
-            <h2>Our History</h2>
+        <section class="content-section" aria-labelledby="history-heading">
+            <h2 id="history-heading">Our History</h2>
             <div class="two-column">
                 <div class="text-col">
                     <p>GreenRoots NPO was founded in 2026 by a group of passionate Johannesburg residents who believed that unused urban spaces could be transformed into vibrant, productive community gardens. What began as a single plot in Braamfontein has grown into a network of 12 active gardens across Gauteng.</p>
@@ -53,20 +83,15 @@
                     <p>In 2022, we received the prestigious Gauteng Environmental Excellence Award for our contributions to urban greening and community upliftment, cementing our reputation as a leading force in sustainable community development.</p>
                 </div>
                 <div class="image-col">
-                    <img src="images/Group members.jpeg"
-                         srcset="images/Group members.jpeg 600w,
-                                 images/Group members.jpeg 1000w"
-                         sizes="(max-width: 768px) 100vw, 50vw"
-                         alt="Founding members of GreenRoots at the first garden in Braamfontein"
-                         loading="lazy">
+                    <img src="images/Group members.jpeg" alt="Founding members of GreenRoots NPO at the first community garden in Braamfontein">
                 </div>
             </div>
         </section>
 
         <!-- ======== MISSION & VISION ======== -->
-        <section class="mission-vision">
+        <section class="mission-vision" aria-labelledby="mission-vision-heading">
             <div class="mission-box">
-                <h2>Our Mission</h2>
+                <h2 id="mission-vision-heading">Our Mission</h2>
                 <p>To transform underutilised urban land into thriving community gardens that promote food security, environmental sustainability, and social cohesion across Johannesburg's communities.</p>
             </div>
             <div class="vision-box">
@@ -76,8 +101,8 @@
         </section>
 
         <!-- ======== OUR VALUES ======== -->
-        <section class="content-section">
-            <h2>Our Core Values</h2>
+        <section class="content-section" aria-labelledby="values-heading">
+            <h2 id="values-heading">Our Core Values</h2>
             <ul class="values-list">
                 <li><strong>Sustainability:</strong> We practise and promote environmentally responsible methods in everything we do.</li>
                 <li><strong>Community First:</strong> Every decision we make centres on the needs and voices of the communities we serve.</li>
@@ -89,18 +114,13 @@
         </section>
 
         <!-- ======== MEET THE TEAM ======== -->
-        <section class="team-section">
-            <h2>Meet Our Team</h2>
+        <section class="team-section" aria-labelledby="team-heading">
+            <h2 id="team-heading">Meet Our Team</h2>
             <div class="team-grid">
 
                 <!-- Team Member 1 -->
                 <div class="team-card">
-                    <img src="images/team1.jpg"
-                         srcset="images/team1.jpg 200w,
-                                 images/team1.jpg 400w"
-                         sizes="(max-width: 768px) 50vw, 200px"
-                         alt="Nomsa Dlamini, Executive Director of GreenRoots NPO"
-                         loading="lazy">
+                    <img src="images/team1.jpg" alt="Nomsa Dlamini, Executive Director of GreenRoots NPO">
                     <h3>Nomsa Dlamini</h3>
                     <p class="role">Executive Director</p>
                     <p>Nomsa has 15 years of experience in non-profit management and environmental advocacy. She holds a Master's degree in Environmental Management from Wits University.</p>
@@ -108,12 +128,7 @@
 
                 <!-- Team Member 2 -->
                 <div class="team-card">
-                    <img src="images/team2.jpg"
-                         srcset="images/team2.jpg 200w,
-                                 images/team2.jpg 400w"
-                         sizes="(max-width: 768px) 50vw, 200px"
-                         alt="Sipho Khumalo, Head of Garden Operations"
-                         loading="lazy">
+                    <img src="images/team2.jpg" alt="Sipho Khumalo, Head of Garden Operations at GreenRoots NPO">
                     <h3>Sipho Khumalo</h3>
                     <p class="role">Head of Garden Operations</p>
                     <p>Sipho oversees all 12 garden sites and coordinates our volunteer teams. He is a qualified horticulturist with a passion for urban agriculture.</p>
@@ -121,12 +136,7 @@
 
                 <!-- Team Member 3 -->
                 <div class="team-card">
-                    <img src="images/team3.jpg"
-                         srcset="images/team3.jpg 200w,
-                                 images/team3.jpg 400w"
-                         sizes="(max-width: 768px) 50vw, 200px"
-                         alt="Lerato Mokoena, Education Programme Manager"
-                         loading="lazy">
+                    <img src="images/team3.jpg" alt="Lerato Mokoena, Education Programme Manager at GreenRoots NPO">
                     <h3>Lerato Mokoena</h3>
                     <p class="role">Education Programme Manager</p>
                     <p>Lerato designs and delivers our school outreach and community workshop programmes. She holds a B.Ed degree with a focus on environmental science.</p>
@@ -134,12 +144,7 @@
 
                 <!-- Team Member 4 -->
                 <div class="team-card">
-                    <img src="images/team4.jpg"
-                         srcset="images/team4.jpg 200w,
-                                 images/team4.jpg 400w"
-                         sizes="(max-width: 768px) 50vw, 200px"
-                         alt="Ahmed Patel, Fundraising and Partnerships Manager"
-                         loading="lazy">
+                    <img src="images/team4.jpg" alt="Ahmed Patel, Fundraising and Partnerships Manager at GreenRoots NPO">
                     <h3>Ahmed Patel</h3>
                     <p class="role">Fundraising &amp; Partnerships</p>
                     <p>Ahmed manages corporate partnerships, grant applications, and donor relationships. He brings 10 years of experience in NPO fundraising and stakeholder engagement.</p>
@@ -149,8 +154,8 @@
         </section>
 
         <!-- ======== AWARDS & RECOGNITION ======== -->
-        <section class="content-section awards-section">
-            <h2>Awards &amp; Recognition</h2>
+        <section class="content-section awards-section" aria-labelledby="awards-heading">
+            <h2 id="awards-heading">Awards &amp; Recognition</h2>
             <ul class="awards-list">
                 <li>2022 — Gauteng Environmental Excellence Award</li>
                 <li>2021 — City of Johannesburg Green Champion Award</li>
@@ -160,6 +165,80 @@
         </section>
 
     </main>
+
+    <div id="modal-overlay" class="modal-overlay" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" type="button" aria-label="Close modal">×</button>
+            <div class="modal-tabs">
+                <button type="button" class="modal-tab active" data-auth-tab="login">Login</button>
+                <button type="button" class="modal-tab" data-auth-tab="register">Register</button>
+                <button type="button" class="modal-tab" data-auth-tab="forgot">Forgot Password</button>
+            </div>
+            <h2 class="modal-heading" id="modal-title">Login to GreenRoots</h2>
+
+            <form class="auth-form active" data-auth-tab="login" id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="login-email" placeholder="you@example.com" required>
+                    <span class="field-error" id="login-email-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="login-password" placeholder="********" required>
+                    <span class="field-error" id="login-password-error"></span>
+                </div>
+                <div class="form-group checkbox-group">
+                    <label><input type="checkbox" id="login-remember" name="remember"> Remember me</label>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-secondary" type="button" aria-label="Close login modal">Cancel</button>
+                    <button class="btn-primary" type="submit">Login</button>
+                </div>
+                <p class="modal-note">Forgot your password? <a href="#" class="auth-forgot-link">Reset it here</a>.</p>
+            </form>
+
+            <form class="auth-form" data-auth-tab="register" id="register-form">
+                <div class="form-group">
+                    <label for="register-name">Full Name</label>
+                    <input type="text" id="register-name" name="register-name" placeholder="Your full name" required>
+                    <span class="field-error" id="register-name-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" name="register-email" placeholder="you@example.com" required>
+                    <span class="field-error" id="register-email-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" name="register-password" placeholder="Create a password" required>
+                    <span class="field-error" id="register-password-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="register-password-confirm">Confirm Password</label>
+                    <input type="password" id="register-password-confirm" name="register-password-confirm" placeholder="Re-enter password" required>
+                    <span class="field-error" id="register-password-confirm-error"></span>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-secondary" type="button" aria-label="Close registration modal">Cancel</button>
+                    <button class="btn-primary" type="submit">Register</button>
+                </div>
+                <p class="modal-note">Already a member? <a href="#" class="auth-back-to-login">Login here</a>.</p>
+            </form>
+
+            <form class="auth-form" data-auth-tab="forgot" id="forgot-form">
+                <div class="form-group">
+                    <label for="forgot-email">Email</label>
+                    <input type="email" id="forgot-email" name="forgot-email" placeholder="you@example.com" required>
+                    <span class="field-error" id="forgot-email-error"></span>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-secondary" type="button" aria-label="Close reset password modal">Cancel</button>
+                    <button class="btn-primary" type="submit">Send Reset Link</button>
+                </div>
+                <p class="modal-note">Remembered your password? <a href="#" class="auth-back-to-login">Go back to login</a>.</p>
+            </form>
+        </div>
+    </div>
 
     <!-- ======== FOOTER ======== -->
     <footer>
@@ -187,11 +266,29 @@
                 <p>Johannesburg, Gauteng, South Africa</p>
             </div>
         </div>
+        <div class="footer-social">
+            <h4>Connect With Us</h4>
+            <div class="social-links">
+                <a class="social-icon whatsapp" href="https://wa.me/27112345678" target="_blank" rel="noopener noreferrer" aria-label="Chat with GreenRoots on WhatsApp">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.04C6.48 2.04 2.04 6.48 2.04 12.01c0 2.12.66 4.08 1.8 5.69L2 22l4.4-1.14a9.96 9.96 0 0 0 5.6 1.45c5.52 0 9.96-4.45 9.96-9.96S17.52 2.04 12 2.04Zm4.66 13.22c-.2.55-1.18 1.05-1.62 1.12-.42.07-.92.11-3.02-.53-2.12-.65-3.47-1.86-4.12-3.17-.52-1.02-.57-1.9-.57-2.01 0-.12 0-.43.17-.58.13-.12.3-.2.45-.3.15-.1.35-.24.52-.36.18-.12.25-.2.38-.32.12-.12.06-.18-.02-.3-.08-.12-.95-2.28-1.3-3.13-.34-.82-.69-.7-.96-.71h-.82c-.24 0-.62.09-.95.45-.32.37-1.22 1.19-1.22 2.9 0 1.72 1.25 3.38 1.42 3.61.17.23 2.45 3.77 5.94 5.27 3.05 1.35 3.05.9 3.6.84.55-.07 1.78-.72 2.03-1.42.24-.7.24-1.3.17-1.42-.07-.12-.26-.18-.55-.3Z"/></svg>
+                </a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Visit GreenRoots on Facebook">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.54 9.9v-7h-2.4V12h2.4v-1.84c0-2.37 1.4-3.69 3.55-3.69 1.03 0 2.1.18 2.1.18v2.31h-1.18c-1.17 0-1.54.73-1.54 1.48V12h2.62l-.42 2.9h-2.2v7A10 10 0 0 0 22 12Z"/></svg>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Visit GreenRoots on Twitter">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22.46 6c-.77.34-1.6.57-2.46.67a4.3 4.3 0 0 0 1.88-2.37 8.66 8.66 0 0 1-2.72 1.04 4.29 4.29 0 0 0-7.3 3.91 12.17 12.17 0 0 1-8.84-4.48 4.28 4.28 0 0 0 1.33 5.72 4.26 4.26 0 0 1-1.94-.54v.05a4.29 4.29 0 0 0 3.44 4.2 4.3 4.3 0 0 1-1.93.07 4.29 4.29 0 0 0 4 2.98A8.6 8.6 0 0 1 2 19.54 12.14 12.14 0 0 0 8.29 21c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.35-.02-.53A8.36 8.36 0 0 0 22.46 6Z"/></svg>
+                </a>
+                <a class="social-icon instagram" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visit GreenRoots on Instagram">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 7.2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6Zm0 7.92a3.12 3.12 0 1 1 0-6.24 3.12 3.12 0 0 1 0 6.24ZM17.67 6.3a1.12 1.12 0 1 0 0 2.24 1.12 1.12 0 0 0 0-2.24ZM20 12c0-1.43-.04-2.86-.12-4.28-.08-1.32-.47-2.21-.99-2.77-.52-.56-1.23-.9-2.14-1C14.98 3.55 13.55 3.5 12 3.5s-2.98.05-4.75.45c-.91.1-1.62.44-2.14 1-.52.56-.91 1.45-.99 2.77C2.04 9.14 2 10.57 2 12s.04 2.86.12 4.28c.08 1.32.47 2.21.99 2.77.52.56 1.23.9 2.14 1 1.77.4 3.2.45 4.75.45s2.98-.05 4.75-.45c.91-.1 1.62-.44 2.14-1 .52-.56.91-1.45.99-2.77C21.96 14.86 22 13.43 22 12Zm-2 5.28c-.06.9-.34 1.4-.56 1.71-.24.34-.56.66-1.12.98-.57.33-1.18.47-1.96.53-1.22.1-1.68.12-4.36.12s-3.14-.02-4.36-.12c-.78-.06-1.39-.2-1.96-.53-.56-.32-.88-.64-1.12-.98-.22-.31-.5-.81-.56-1.71-.09-1.17-.12-1.53-.12-4.16s.03-2.99.12-4.16c.06-.9.34-1.4.56-1.71.24-.34.56-.66 1.12-.98.57-.33 1.18-.47 1.96-.53C8.86 3.5 9.32 3.48 12 3.48s3.14.02 4.36.12c.78.06 1.39.2 1.96.53.56.32.88.64 1.12.98.22.31.5.81.56 1.71.09 1.17.12 1.53.12 4.16s-.03 2.99-.12 4.16Z"/></svg>
+                </a>
+            </div>
+        </div>
         <div class="footer-bottom">
             <p>&copy; 2026 GreenRoots NPO. All Rights Reserved. | Reg. NPO 245-678</p>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="js/main.js"></script>
 
 </body>

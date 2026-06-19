@@ -1,66 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ======== SEO META TAGS (Part 3) ======== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore GreenRoots NPO's community programmes including garden establishment, environmental education, composting workshops, and corporate greening initiatives.">
-    <meta name="keywords" content="community gardening programmes, environmental education, composting workshops, urban farming, Johannesburg NPO">
+
+    <!-- Primary SEO Meta Tags -->
+    <meta name="description" content="Explore GreenRoots NPO's community programmes — garden establishment, environmental education, composting workshops, and corporate greening partnerships in Johannesburg.">
+    <meta name="keywords" content="community gardening programmes Johannesburg, environmental education NPO, composting workshops, urban farming South Africa, corporate CSR gardening, GreenRoots programmes">
     <meta name="author" content="GreenRoots NPO">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2d6a4f">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Our Programmes | GreenRoots NPO">
+    <meta property="og:description" content="Discover all GreenRoots NPO programmes — free community gardening, environmental education, composting workshops and corporate partnerships across Johannesburg.">
+    <meta property="og:image" content="images/Garden establishment.jpeg">
+    <meta property="og:url" content="https://greenrootsnpo.netlify.app/services.html">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://greenrootsnpo.netlify.app/services.html">
+
     <title>Our Programmes | GreenRoots NPO</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- ======== HEADER SECTION ======== -->
+    <!-- ======== HEADER ======== -->
     <header>
         <div class="logo-area">
-            <img src="images/LOGO.jpeg"
-                 srcset="images/LOGO.jpeg 1x, images/LOGO.jpeg 2x"
-                 alt="GreenRoots NPO Logo"
-                 class="logo"
-                 width="48" height="48">
+            <img src="images/LOGO.jpeg" alt="GreenRoots NPO Logo" class="logo">
             <span class="org-name">GreenRoots NPO</span>
         </div>
 
-        <!-- ======== NAVIGATION MENU ======== -->
-        <nav>
+        <!-- Hamburger Button -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- ======== NAVIGATION ======== -->
+        <nav id="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html" class="active">Our Programmes</a></li>
+                <li><a href="services.html" class="active" aria-current="page">Our Programmes</a></li>
                 <li><a href="enquiry.html">Get Involved</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <div class="header-actions">
+            <button class="btn-secondary modal-open" data-modal="login-modal" type="button">Login</button>
+            <button class="btn-primary modal-open" data-modal="register-modal" type="button">Register</button>
+        </div>
     </header>
 
     <!-- ======== MAIN CONTENT ======== -->
     <main>
 
         <!-- Page Banner -->
-        <section class="page-banner">
-            <h1>Our Programmes</h1>
+        <section class="page-banner" aria-labelledby="services-banner-heading">
+            <h1 id="services-banner-heading">Our Programmes</h1>
             <p>Planting seeds of change across Johannesburg's communities.</p>
         </section>
 
         <!-- ======== PROGRAMME OVERVIEW ======== -->
-        <section class="content-section">
-            <h2>What We Offer</h2>
+        <section class="content-section" aria-labelledby="programmes-overview-heading">
+            <h2 id="programmes-overview-heading">What We Offer</h2>
             <p>GreenRoots NPO runs a diverse range of programmes designed to transform communities through sustainable urban gardening, environmental education, and green skills development. All our programmes are <strong>free of charge</strong> to community members and schools.</p>
         </section>
 
         <!-- ======== PROGRAMME 1: COMMUNITY GARDENS ======== -->
-        <section class="programme-section">
+        <section class="programme-section" aria-labelledby="prog1-heading">
             <div class="programme-image">
-                <img src="images/Garden establishment.jpeg"
-                     srcset="images/Garden establishment.jpeg 600w,
-                             images/Garden establishment.jpeg 1000w"
-                     sizes="(max-width: 768px) 100vw, 40vw"
-                     alt="Volunteers planting seedlings in a community garden bed"
-                     loading="lazy">
+                <img src="images/Garden establishment.jpeg" alt="Volunteers planting seedlings in raised garden beds at a GreenRoots community garden">
             </div>
             <div class="programme-details">
-                <h2>1. Community Garden Establishment</h2>
+                <h2 id="prog1-heading">1. Community Garden Establishment</h2>
                 <p>We identify underused urban spaces and, working with local government and property owners, transform them into thriving community gardens. Each garden is managed by a trained local committee with ongoing support from GreenRoots.</p>
                 <h3>What's Included:</h3>
                 <ul>
@@ -75,9 +100,9 @@
         </section>
 
         <!-- ======== PROGRAMME 2: EDUCATION ======== -->
-        <section class="programme-section alt-layout">
+        <section class="programme-section alt-layout" aria-labelledby="prog2-heading">
             <div class="programme-details">
-                <h2>2. Environmental Education Programme</h2>
+                <h2 id="prog2-heading">2. Environmental Education Programme</h2>
                 <p>Our education team visits schools and community centres to deliver engaging, curriculum-aligned environmental education sessions. We make learning about nature fun, practical, and impactful for learners of all ages.</p>
                 <h3>Topics Covered:</h3>
                 <ul>
@@ -90,27 +115,17 @@
                 <p><strong>Target Group:</strong> Grades 4–12, Community Adults | <strong>Duration:</strong> 1–2 hour sessions</p>
             </div>
             <div class="programme-image">
-                <img src="images/ENVIRONMENTAL EDUCATION.jpeg"
-                     srcset="images/ENVIRONMENTAL EDUCATION.jpeg 600w,
-                             images/ENVIRONMENTAL EDUCATION.jpeg 1000w"
-                     sizes="(max-width: 768px) 100vw, 40vw"
-                     alt="GreenRoots educator presenting to a class of school learners"
-                     loading="lazy">
+                <img src="images/ENVIRONMENTAL EDUCATION.jpeg" alt="GreenRoots educator presenting an environmental lesson to school learners outdoors">
             </div>
         </section>
 
         <!-- ======== PROGRAMME 3: COMPOSTING ======== -->
-        <section class="programme-section">
+        <section class="programme-section" aria-labelledby="prog3-heading">
             <div class="programme-image">
-                <img src="images/COMPOST WORKSHOPS.jpeg"
-                     srcset="images/COMPOST WORKSHOPS.jpeg 600w,
-                             images/COMPOST WORKSHOPS.jpeg 1000w"
-                     sizes="(max-width: 768px) 100vw, 40vw"
-                     alt="Hands turning a compost pile with garden waste"
-                     loading="lazy">
+                <img src="images/COMPOST WORKSHOPS.jpeg" alt="Community member turning a compost pile at a Saturday GreenRoots workshop">
             </div>
             <div class="programme-details">
-                <h2>3. Composting Workshops</h2>
+                <h2 id="prog3-heading">3. Composting Workshops</h2>
                 <p>Our Saturday composting workshops teach community members how to recycle organic waste into nutrient-rich compost, reducing landfill waste while enriching garden soil. These sessions are hands-on and practical.</p>
                 <h3>Workshop Highlights:</h3>
                 <ul>
@@ -125,9 +140,9 @@
         </section>
 
         <!-- ======== PROGRAMME 4: CORPORATE GREENING ======== -->
-        <section class="programme-section alt-layout">
+        <section class="programme-section alt-layout" aria-labelledby="prog4-heading">
             <div class="programme-details">
-                <h2>4. Corporate Greening Partnerships</h2>
+                <h2 id="prog4-heading">4. Corporate Greening Partnerships</h2>
                 <p>We partner with companies to fulfil their Corporate Social Responsibility (CSR) goals through meaningful, hands-on environmental projects. Corporate partners can sponsor garden sites, fund equipment, or bring teams to volunteer alongside our community members.</p>
                 <h3>Partnership Options:</h3>
                 <ul>
@@ -140,25 +155,20 @@
                 <p><strong>For enquiries:</strong> <a href="enquiry.html">Submit a Partnership Enquiry</a></p>
             </div>
             <div class="programme-image">
-                <img src="images/CORPORATE GREENING.jpeg"
-                     srcset="images/CORPORATE GREENING.jpeg 600w,
-                             images/CORPORATE GREENING.jpeg 1000w"
-                     sizes="(max-width: 768px) 100vw, 40vw"
-                     alt="Corporate volunteers in branded t-shirts working in a GreenRoots garden"
-                     loading="lazy">
+                <img src="images/CORPORATE GREENING.jpeg" alt="Corporate volunteers in branded t-shirts working in a GreenRoots community garden">
             </div>
         </section>
 
         <!-- ======== UPCOMING EVENTS ======== -->
-        <section class="content-section">
-            <h2>Upcoming Events</h2>
+        <section class="content-section" aria-labelledby="events-heading">
+            <h2 id="events-heading">Upcoming Events</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Date</th>
-                        <th>Event</th>
-                        <th>Location</th>
-                        <th>Time</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Event</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Time</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -192,6 +202,80 @@
 
     </main>
 
+    <div id="modal-overlay" class="modal-overlay" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" type="button" aria-label="Close modal">×</button>
+            <div class="modal-tabs">
+                <button type="button" class="modal-tab active" data-auth-tab="login">Login</button>
+                <button type="button" class="modal-tab" data-auth-tab="register">Register</button>
+                <button type="button" class="modal-tab" data-auth-tab="forgot">Forgot Password</button>
+            </div>
+            <h2 class="modal-heading" id="modal-title">Login to GreenRoots</h2>
+
+            <form class="auth-form active" data-auth-tab="login" id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="login-email" placeholder="you@example.com" required>
+                    <span class="field-error" id="login-email-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="login-password" placeholder="********" required>
+                    <span class="field-error" id="login-password-error"></span>
+                </div>
+                <div class="form-group checkbox-group">
+                    <label><input type="checkbox" id="login-remember" name="remember"> Remember me</label>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-secondary" type="button" aria-label="Close login modal">Cancel</button>
+                    <button class="btn-primary" type="submit">Login</button>
+                </div>
+                <p class="modal-note">Forgot your password? <a href="#" class="auth-forgot-link">Reset it here</a>.</p>
+            </form>
+
+            <form class="auth-form" data-auth-tab="register" id="register-form">
+                <div class="form-group">
+                    <label for="register-name">Full Name</label>
+                    <input type="text" id="register-name" name="register-name" placeholder="Your full name" required>
+                    <span class="field-error" id="register-name-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" name="register-email" placeholder="you@example.com" required>
+                    <span class="field-error" id="register-email-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" name="register-password" placeholder="Create a password" required>
+                    <span class="field-error" id="register-password-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="register-password-confirm">Confirm Password</label>
+                    <input type="password" id="register-password-confirm" name="register-password-confirm" placeholder="Re-enter password" required>
+                    <span class="field-error" id="register-password-confirm-error"></span>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-secondary" type="button" aria-label="Close registration modal">Cancel</button>
+                    <button class="btn-primary" type="submit">Register</button>
+                </div>
+                <p class="modal-note">Already a member? <a href="#" class="auth-back-to-login">Login here</a>.</p>
+            </form>
+
+            <form class="auth-form" data-auth-tab="forgot" id="forgot-form">
+                <div class="form-group">
+                    <label for="forgot-email">Email</label>
+                    <input type="email" id="forgot-email" name="forgot-email" placeholder="you@example.com" required>
+                    <span class="field-error" id="forgot-email-error"></span>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-secondary" type="button" aria-label="Close reset password modal">Cancel</button>
+                    <button class="btn-primary" type="submit">Send Reset Link</button>
+                </div>
+                <p class="modal-note">Remembered your password? <a href="#" class="auth-back-to-login">Go back to login</a>.</p>
+            </form>
+        </div>
+    </div>
+
     <!-- ======== FOOTER ======== -->
     <footer>
         <div class="footer-columns">
@@ -218,11 +302,29 @@
                 <p>Johannesburg, Gauteng, South Africa</p>
             </div>
         </div>
+        <div class="footer-social">
+            <h4>Connect With Us</h4>
+            <div class="social-links">
+                <a class="social-icon whatsapp" href="https://wa.me/27112345678" target="_blank" rel="noopener noreferrer" aria-label="Chat with GreenRoots on WhatsApp">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.04C6.48 2.04 2.04 6.48 2.04 12.01c0 2.12.66 4.08 1.8 5.69L2 22l4.4-1.14a9.96 9.96 0 0 0 5.6 1.45c5.52 0 9.96-4.45 9.96-9.96S17.52 2.04 12 2.04Zm4.66 13.22c-.2.55-1.18 1.05-1.62 1.12-.42.07-.92.11-3.02-.53-2.12-.65-3.47-1.86-4.12-3.17-.52-1.02-.57-1.9-.57-2.01 0-.12 0-.43.17-.58.13-.12.3-.2.45-.3.15-.1.35-.24.52-.36.18-.12.25-.2.38-.32.12-.12.06-.18-.02-.3-.08-.12-.95-2.28-1.3-3.13-.34-.82-.69-.7-.96-.71h-.82c-.24 0-.62.09-.95.45-.32.37-1.22 1.19-1.22 2.9 0 1.72 1.25 3.38 1.42 3.61.17.23 2.45 3.77 5.94 5.27 3.05 1.35 3.05.9 3.6.84.55-.07 1.78-.72 2.03-1.42.24-.7.24-1.3.17-1.42-.07-.12-.26-.18-.55-.3Z"/></svg>
+                </a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Visit GreenRoots on Facebook">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.54 9.9v-7h-2.4V12h2.4v-1.84c0-2.37 1.4-3.69 3.55-3.69 1.03 0 2.1.18 2.1.18v2.31h-1.18c-1.17 0-1.54.73-1.54 1.48V12h2.62l-.42 2.9h-2.2v7A10 10 0 0 0 22 12Z"/></svg>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Visit GreenRoots on Twitter">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22.46 6c-.77.34-1.6.57-2.46.67a4.3 4.3 0 0 0 1.88-2.37 8.66 8.66 0 0 1-2.72 1.04 4.29 4.29 0 0 0-7.3 3.91 12.17 12.17 0 0 1-8.84-4.48 4.28 4.28 0 0 0 1.33 5.72 4.26 4.26 0 0 1-1.94-.54v.05a4.29 4.29 0 0 0 3.44 4.2 4.3 4.3 0 0 1-1.93.07 4.29 4.29 0 0 0 4 2.98A8.6 8.6 0 0 1 2 19.54 12.14 12.14 0 0 0 8.29 21c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.35-.02-.53A8.36 8.36 0 0 0 22.46 6Z"/></svg>
+                </a>
+                <a class="social-icon instagram" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visit GreenRoots on Instagram">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 7.2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6Zm0 7.92a3.12 3.12 0 1 1 0-6.24 3.12 3.12 0 0 1 0 6.24ZM17.67 6.3a1.12 1.12 0 1 0 0 2.24 1.12 1.12 0 0 0 0-2.24ZM20 12c0-1.43-.04-2.86-.12-4.28-.08-1.32-.47-2.21-.99-2.77-.52-.56-1.23-.9-2.14-1C14.98 3.55 13.55 3.5 12 3.5s-2.98.05-4.75.45c-.91.1-1.62.44-2.14 1-.52.56-.91 1.45-.99 2.77C2.04 9.14 2 10.57 2 12s.04 2.86.12 4.28c.08 1.32.47 2.21.99 2.77.52.56 1.23.9 2.14 1 1.77.4 3.2.45 4.75.45s2.98-.05 4.75-.45c.91-.1 1.62-.44 2.14-1 .52-.56.91-1.45.99-2.77C21.96 14.86 22 13.43 22 12Zm-2 5.28c-.06.9-.34 1.4-.56 1.71-.24.34-.56.66-1.12.98-.57.33-1.18.47-1.96.53-1.22.1-1.68.12-4.36.12s-3.14-.02-4.36-.12c-.78-.06-1.39-.2-1.96-.53-.56-.32-.88-.64-1.12-.98-.22-.31-.5-.81-.56-1.71-.09-1.17-.12-1.53-.12-4.16s.03-2.99.12-4.16c.06-.9.34-1.4.56-1.71.24-.34.56-.66 1.12-.98.57-.33 1.18-.47 1.96-.53C8.86 3.5 9.32 3.48 12 3.48s3.14.02 4.36.12c.78.06 1.39.2 1.96.53.56.32.88.64 1.12.98.22.31.5.81.56 1.71.09 1.17.12 1.53.12 4.16s-.03 2.99-.12 4.16Z"/></svg>
+                </a>
+            </div>
+        </div>
         <div class="footer-bottom">
             <p>&copy; 2026 GreenRoots NPO. All Rights Reserved. | Reg. NPO 245-678</p>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="js/main.js"></script>
 
 </body>

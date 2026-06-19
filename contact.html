@@ -1,68 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta tags for SEO and responsive design -->
+    <!-- ======== SEO META TAGS (Part 3) ======== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact GreenRoots NPO. Find our garden locations across Johannesburg including Braamfontein, Soweto, Alexandra, and Sandton. Reach our head office for enquiries.">
-    <meta name="keywords" content="contact GreenRoots, garden locations, Johannesburg NPO address, get in touch, map">
+
+    <!-- Primary SEO Meta Tags -->
+    <meta name="description" content="Contact GreenRoots NPO. Find our four garden locations across Johannesburg — Braamfontein, Soweto, Alexandra, and Sandton. Send us a message or visit us today.">
+    <meta name="keywords" content="contact GreenRoots NPO, garden locations Johannesburg, Braamfontein community garden, Soweto garden, Alexandra garden, Sandton garden, NPO contact South Africa">
     <meta name="author" content="GreenRoots NPO">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2d6a4f">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact Us | GreenRoots NPO">
+    <meta property="og:description" content="Find GreenRoots NPO garden locations across Johannesburg. Get in touch with our team for volunteering, sponsorship, or general enquiries.">
+    <meta property="og:image" content="images/LOGO.jpeg">
+    <meta property="og:url" content="https://greenrootsnpo.netlify.app/contact.html">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://greenrootsnpo.netlify.app/contact.html">
+
     <title>Contact Us | GreenRoots NPO</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- ======== HEADER SECTION ======== -->
+    <!-- ======== HEADER ======== -->
     <header>
         <div class="logo-area">
-            <img src="images/LOGO.jpeg"
-                 srcset="images/LOGO.jpeg 1x, images/LOGO.jpeg 2x"
-                 alt="GreenRoots NPO Logo"
-                 class="logo"
-                 width="48" height="48">
+            <img src="images/LOGO.jpeg" alt="GreenRoots NPO Logo" class="logo">
             <span class="org-name">GreenRoots NPO</span>
         </div>
 
-        <!-- ======== NAVIGATION MENU ======== -->
-        <nav>
+        <!-- Hamburger Button -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- ======== NAVIGATION ======== -->
+        <nav id="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Our Programmes</a></li>
                 <li><a href="enquiry.html">Get Involved</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
             </ul>
         </nav>
+        <div class="header-actions">
+            <button class="btn-secondary modal-open" data-modal="login-modal" type="button">Login</button>
+            <button class="btn-primary modal-open" data-modal="register-modal" type="button">Register</button>
+        </div>
     </header>
 
     <!-- ======== MAIN CONTENT ======== -->
     <main>
 
         <!-- Page Banner -->
-        <section class="page-banner">
-            <h1>Contact Us</h1>
+        <section class="page-banner" aria-labelledby="contact-banner-heading">
+            <h1 id="contact-banner-heading">Contact Us</h1>
             <p>Find us, reach us, and grow with us.</p>
         </section>
 
         <!-- ======== CONTACT DETAILS ======== -->
-        <section class="content-section contact-details-section">
-            <h2>Get In Touch</h2>
+        <section class="content-section contact-details-section" aria-labelledby="contact-details-heading">
+            <h2 id="contact-details-heading">Get In Touch</h2>
             <div class="contact-grid">
 
                 <!-- Head Office -->
                 <div class="contact-card">
                     <h3>Head Office</h3>
                     <p><strong>Address:</strong> 14 Miller Street, Braamfontein, Johannesburg, 2001</p>
-                    <p><strong>Tel:</strong> +27 11 234 5678</p>
-                    <p><strong>Email:</strong> info@greenrootsnpo.org.za</p>
+                    <p><strong>Tel:</strong> <a href="tel:+27112345678">+27 11 234 5678</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@greenrootsnpo.org.za">info@greenrootsnpo.org.za</a></p>
                     <p><strong>Office Hours:</strong> Monday – Friday, 08:00 – 17:00</p>
                 </div>
 
                 <!-- Garden Operations -->
                 <div class="contact-card">
                     <h3>Garden Operations</h3>
-                    <p><strong>Tel:</strong> +27 72 456 7890</p>
-                    <p><strong>Email:</strong> gardens@greenrootsnpo.org.za</p>
+                    <p><strong>Tel:</strong> <a href="tel:+27724567890">+27 72 456 7890</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:gardens@greenrootsnpo.org.za">gardens@greenrootsnpo.org.za</a></p>
                     <p><strong>Coordinator:</strong> Sipho Khumalo</p>
                     <p><strong>Hours:</strong> Monday – Saturday, 07:00 – 15:00</p>
                 </div>
@@ -70,8 +99,8 @@
                 <!-- Education Team -->
                 <div class="contact-card">
                     <h3>Education Team</h3>
-                    <p><strong>Tel:</strong> +27 83 789 0123</p>
-                    <p><strong>Email:</strong> education@greenrootsnpo.org.za</p>
+                    <p><strong>Tel:</strong> <a href="tel:+27837890123">+27 83 789 0123</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:education@greenrootsnpo.org.za">education@greenrootsnpo.org.za</a></p>
                     <p><strong>Coordinator:</strong> Lerato Mokoena</p>
                     <p><strong>Hours:</strong> Monday – Friday, 08:00 – 16:00</p>
                 </div>
@@ -79,8 +108,8 @@
                 <!-- Media & Partnerships -->
                 <div class="contact-card">
                     <h3>Media &amp; Partnerships</h3>
-                    <p><strong>Tel:</strong> +27 61 234 5670</p>
-                    <p><strong>Email:</strong> partnerships@greenrootsnpo.org.za</p>
+                    <p><strong>Tel:</strong> <a href="tel:+27612345670">+27 61 234 5670</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:partnerships@greenrootsnpo.org.za">partnerships@greenrootsnpo.org.za</a></p>
                     <p><strong>Coordinator:</strong> Ahmed Patel</p>
                     <p><strong>Hours:</strong> Monday – Friday, 09:00 – 17:00</p>
                 </div>
@@ -88,19 +117,18 @@
             </div>
         </section>
 
-        <!-- ======== OUR LOCATIONS - MULTIPLE MAPS ======== -->
+        <!-- ======== OUR LOCATIONS — MULTIPLE MAPS ======== -->
         <!--
-            As per assignment requirement: "contact page should contain more than 1 location"
-            Four embedded Google Maps are provided below for each key garden location.
+            Assignment requirement: contact page must contain more than 1 location.
+            Four embedded Google Maps provided — one per garden site.
         -->
-        <section class="content-section locations-section">
-            <h2>Our Garden Locations</h2>
+        <section class="content-section locations-section" aria-labelledby="locations-heading">
+            <h2 id="locations-heading">Our Garden Locations</h2>
             <p>GreenRoots NPO operates gardens across Johannesburg. Visit us at any of our four primary sites below.</p>
 
-            <!-- Location Cards Grid -->
             <div class="location-grid">
 
-                <!-- Location 1: Braamfontein (Head Office Garden) -->
+                <!-- Location 1: Braamfontein -->
                 <div class="location-card">
                     <h3>1. Braamfontein Community Garden</h3>
                     <address>
@@ -108,13 +136,12 @@
                         Johannesburg, 2001
                     </address>
                     <p><strong>Open:</strong> Mon–Sat | 07:00 – 15:00</p>
-                    <!-- Embedded Google Map – Braamfontein, Johannesburg -->
                     <div class="map-container">
                         <iframe
                             title="Braamfontein Community Garden Map"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.3543!2d28.0390!3d-26.1925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950d72e39b4b23%3A0x6c3e4e41e7a82d3d!2sBraamfontein%2C+Johannesburg!5e0!3m2!1sen!2sza!4v1681000000000!5m2!1sen!2sza"
                             width="100%"
-                            height="250"
+                            height="220"
                             style="border:0;"
                             allowfullscreen=""
                             loading="lazy"
@@ -123,7 +150,7 @@
                     </div>
                 </div>
 
-                <!-- Location 2: Soweto Garden -->
+                <!-- Location 2: Soweto -->
                 <div class="location-card">
                     <h3>2. Soweto Community Garden</h3>
                     <address>
@@ -131,13 +158,12 @@
                         Soweto, 1852
                     </address>
                     <p><strong>Open:</strong> Mon–Sat | 07:00 – 15:00</p>
-                    <!-- Embedded Google Map – Soweto, Johannesburg -->
                     <div class="map-container">
                         <iframe
                             title="Soweto Community Garden Map"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.3543!2d27.8585!3d-26.2678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950dc4a7e8d0e3%3A0x6d6c53c4b5a31d84!2sSoweto%2C+Johannesburg!5e0!3m2!1sen!2sza!4v1681000000001!5m2!1sen!2sza"
                             width="100%"
-                            height="250"
+                            height="220"
                             style="border:0;"
                             allowfullscreen=""
                             loading="lazy"
@@ -146,7 +172,7 @@
                     </div>
                 </div>
 
-                <!-- Location 3: Alexandra Garden -->
+                <!-- Location 3: Alexandra -->
                 <div class="location-card">
                     <h3>3. Alexandra Community Garden</h3>
                     <address>
@@ -154,13 +180,12 @@
                         Johannesburg, 2090
                     </address>
                     <p><strong>Open:</strong> Tue, Thu, Sat | 07:00 – 14:00</p>
-                    <!-- Embedded Google Map – Alexandra, Johannesburg -->
                     <div class="map-container">
                         <iframe
                             title="Alexandra Community Garden Map"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.3543!2d28.1028!3d-26.1051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950f3e69d42dab%3A0x9e88d8d5f61c3249!2sAlexandra%2C+Johannesburg!5e0!3m2!1sen!2sza!4v1681000000002!5m2!1sen!2sza"
                             width="100%"
-                            height="250"
+                            height="220"
                             style="border:0;"
                             allowfullscreen=""
                             loading="lazy"
@@ -169,7 +194,7 @@
                     </div>
                 </div>
 
-                <!-- Location 4: Sandton Garden -->
+                <!-- Location 4: Sandton -->
                 <div class="location-card">
                     <h3>4. Sandton Community Garden</h3>
                     <address>
@@ -177,13 +202,12 @@
                         Sandton, 2196
                     </address>
                     <p><strong>Open:</strong> Wed, Fri, Sat | 08:00 – 14:00</p>
-                    <!-- Embedded Google Map – Sandton, Johannesburg -->
                     <div class="map-container">
                         <iframe
                             title="Sandton Community Garden Map"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.3543!2d28.0564!3d-26.1073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950f387d74c57b%3A0xa5c4e18ff37e3a60!2sSandton%2C+Johannesburg!5e0!3m2!1sen!2sza!4v1681000000003!5m2!1sen!2sza"
                             width="100%"
-                            height="250"
+                            height="220"
                             style="border:0;"
                             allowfullscreen=""
                             loading="lazy"
@@ -196,47 +220,184 @@
         </section>
 
         <!-- ======== CONTACT FORM ======== -->
-        <section class="form-section">
-            <h2>Send Us a Message</h2>
-            <p>For general enquiries, please complete the form below. For volunteering or partnership enquiries, please use our <a href="enquiry.html">Get Involved</a> page.</p>
+        <section class="form-section" aria-labelledby="contact-form-heading">
+            <h2 id="contact-form-heading">Send Us a Message</h2>
+            <p>For general enquiries, complete the form below. For volunteering or partnerships, please use our <a href="enquiry.html">Get Involved</a> page.</p>
 
-            <!-- Contact Form with client-side validation -->
+            <!-- Success Message (hidden, shown by JS after valid submission) -->
+            <div id="contact-success" class="form-success" style="display:none;" role="alert">
+                <h3>✅ Message Sent Successfully!</h3>
+                <p>Thank you for contacting GreenRoots NPO. Your email has been prepared and sent. We will get back to you shortly.</p>
+            </div>
+
+            <!--
+                Contact Form — Part 3.
+                On valid submission, JS compiles all fields into a mailto: link
+                and opens the user's email client with the message pre-filled,
+                addressed to info@greenrootsnpo.org.za
+            -->
             <form action="#" method="POST" id="contact-form" novalidate>
 
                 <!-- Full Name -->
                 <div class="form-group">
-                    <label for="contact-name">Full Name <span class="required">*</span></label>
-                    <input type="text" id="contact-name" name="contact_name" placeholder="Your full name" required minlength="2" maxlength="100">
+                    <label for="contact-name">Full Name <span class="required" aria-label="required">*</span></label>
+                    <input
+                        type="text"
+                        id="contact-name"
+                        name="contact_name"
+                        placeholder="Your full name"
+                        required
+                        minlength="2"
+                        maxlength="100"
+                        aria-describedby="contact-name-error"
+                        autocomplete="name">
+                    <span class="field-error" id="contact-name-error" role="alert"></span>
                 </div>
 
                 <!-- Email -->
                 <div class="form-group">
-                    <label for="contact-email">Email Address <span class="required">*</span></label>
-                    <input type="email" id="contact-email" name="contact_email" placeholder="your@email.co.za" required>
+                    <label for="contact-email">Email Address <span class="required" aria-label="required">*</span></label>
+                    <input
+                        type="email"
+                        id="contact-email"
+                        name="contact_email"
+                        placeholder="your@email.co.za"
+                        required
+                        aria-describedby="contact-email-error"
+                        autocomplete="email">
+                    <span class="field-error" id="contact-email-error" role="alert"></span>
                 </div>
 
                 <!-- Subject -->
                 <div class="form-group">
-                    <label for="subject">Subject <span class="required">*</span></label>
-                    <input type="text" id="subject" name="subject" placeholder="What is your enquiry about?" required maxlength="150">
+                    <label for="subject">Subject <span class="required" aria-label="required">*</span></label>
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="What is your enquiry about?"
+                        required
+                        maxlength="150"
+                        aria-describedby="subject-error">
+                    <span class="field-error" id="subject-error" role="alert"></span>
+                </div>
+
+                <!-- Message Type -->
+                <div class="form-group">
+                    <label for="message-type">Type of Message <span class="required" aria-label="required">*</span></label>
+                    <select id="message-type" name="message_type" required aria-describedby="message-type-error">
+                        <option value="" disabled selected>-- Select message type --</option>
+                        <option value="general">General Enquiry</option>
+                        <option value="volunteer">Volunteer Information</option>
+                        <option value="sponsorship">Sponsorship Enquiry</option>
+                        <option value="media">Media / Press</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="complaint">Complaint</option>
+                    </select>
+                    <span class="field-error" id="message-type-error" role="alert"></span>
                 </div>
 
                 <!-- Message -->
                 <div class="form-group">
-                    <label for="contact-message">Message <span class="required">*</span></label>
-                    <textarea id="contact-message" name="contact_message" rows="6" placeholder="Type your message here..." required minlength="20"></textarea>
+                    <label for="contact-message">Message <span class="required" aria-label="required">*</span></label>
+                    <textarea
+                        id="contact-message"
+                        name="contact_message"
+                        rows="6"
+                        placeholder="Type your message here..."
+                        required
+                        minlength="20"
+                        maxlength="2000"
+                        aria-describedby="contact-message-error"></textarea>
+                    <span class="field-error" id="contact-message-error" role="alert"></span>
+                    <!-- Character counter updated by JS -->
+                    <span class="char-count" id="contact-message-count">0 / 2000 characters</span>
                 </div>
 
-                <!-- Submit -->
-                <div class="form-group">
+                <!-- Submit / Reset -->
+                <div class="form-buttons">
                     <button type="submit" class="btn-primary">Send Message</button>
-                    <button type="reset" class="btn-secondary">Clear</button>
+                    <button type="reset" class="btn-secondary" id="contact-reset">Clear</button>
                 </div>
 
             </form>
         </section>
 
     </main>
+
+    <div id="modal-overlay" class="modal-overlay" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" type="button" aria-label="Close modal">×</button>
+            <div class="modal-tabs">
+                <button type="button" class="modal-tab active" data-auth-tab="login">Login</button>
+                <button type="button" class="modal-tab" data-auth-tab="register">Register</button>
+                <button type="button" class="modal-tab" data-auth-tab="forgot">Forgot Password</button>
+            </div>
+            <h2 class="modal-heading" id="modal-title">Login to GreenRoots</h2>
+
+            <form class="auth-form active" data-auth-tab="login" id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="login-email" placeholder="you@example.com" required>
+                    <span class="field-error" id="login-email-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="login-password" placeholder="********" required>
+                    <span class="field-error" id="login-password-error"></span>
+                </div>
+                <div class="form-group checkbox-group">
+                    <label><input type="checkbox" id="login-remember" name="remember"> Remember me</label>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-secondary" type="button" aria-label="Close login modal">Cancel</button>
+                    <button class="btn-primary" type="submit">Login</button>
+                </div>
+                <p class="modal-note">Forgot your password? <a href="#" class="auth-forgot-link">Reset it here</a>.</p>
+            </form>
+
+            <form class="auth-form" data-auth-tab="register" id="register-form">
+                <div class="form-group">
+                    <label for="register-name">Full Name</label>
+                    <input type="text" id="register-name" name="register-name" placeholder="Your full name" required>
+                    <span class="field-error" id="register-name-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" name="register-email" placeholder="you@example.com" required>
+                    <span class="field-error" id="register-email-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" name="register-password" placeholder="Create a password" required>
+                    <span class="field-error" id="register-password-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="register-password-confirm">Confirm Password</label>
+                    <input type="password" id="register-password-confirm" name="register-password-confirm" placeholder="Re-enter password" required>
+                    <span class="field-error" id="register-password-confirm-error"></span>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-secondary" type="button" aria-label="Close registration modal">Cancel</button>
+                    <button class="btn-primary" type="submit">Register</button>
+                </div>
+                <p class="modal-note">Already a member? <a href="#" class="auth-back-to-login">Login here</a>.</p>
+            </form>
+
+            <form class="auth-form" data-auth-tab="forgot" id="forgot-form">
+                <div class="form-group">
+                    <label for="forgot-email">Email</label>
+                    <input type="email" id="forgot-email" name="forgot-email" placeholder="you@example.com" required>
+                    <span class="field-error" id="forgot-email-error"></span>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-secondary" type="button" aria-label="Close reset password modal">Cancel</button>
+                    <button class="btn-primary" type="submit">Send Reset Link</button>
+                </div>
+                <p class="modal-note">Remembered your password? <a href="#" class="auth-back-to-login">Go back to login</a>.</p>
+            </form>
+        </div>
+    </div>
 
     <!-- ======== FOOTER ======== -->
     <footer>
@@ -264,11 +425,29 @@
                 <p>Johannesburg, Gauteng, South Africa</p>
             </div>
         </div>
+        <div class="footer-social">
+            <h4>Connect With Us</h4>
+            <div class="social-links">
+                <a class="social-icon whatsapp" href="https://wa.me/27112345678" target="_blank" rel="noopener noreferrer" aria-label="Chat with GreenRoots on WhatsApp">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.04C6.48 2.04 2.04 6.48 2.04 12.01c0 2.12.66 4.08 1.8 5.69L2 22l4.4-1.14a9.96 9.96 0 0 0 5.6 1.45c5.52 0 9.96-4.45 9.96-9.96S17.52 2.04 12 2.04Zm4.66 13.22c-.2.55-1.18 1.05-1.62 1.12-.42.07-.92.11-3.02-.53-2.12-.65-3.47-1.86-4.12-3.17-.52-1.02-.57-1.9-.57-2.01 0-.12 0-.43.17-.58.13-.12.3-.2.45-.3.15-.1.35-.24.52-.36.18-.12.25-.2.38-.32.12-.12.06-.18-.02-.3-.08-.12-.95-2.28-1.3-3.13-.34-.82-.69-.7-.96-.71h-.82c-.24 0-.62.09-.95.45-.32.37-1.22 1.19-1.22 2.9 0 1.72 1.25 3.38 1.42 3.61.17.23 2.45 3.77 5.94 5.27 3.05 1.35 3.05.9 3.6.84.55-.07 1.78-.72 2.03-1.42.24-.7.24-1.3.17-1.42-.07-.12-.26-.18-.55-.3Z"/></svg>
+                </a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Visit GreenRoots on Facebook">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.54 9.9v-7h-2.4V12h2.4v-1.84c0-2.37 1.4-3.69 3.55-3.69 1.03 0 2.1.18 2.1.18v2.31h-1.18c-1.17 0-1.54.73-1.54 1.48V12h2.62l-.42 2.9h-2.2v7A10 10 0 0 0 22 12Z"/></svg>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Visit GreenRoots on Twitter">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22.46 6c-.77.34-1.6.57-2.46.67a4.3 4.3 0 0 0 1.88-2.37 8.66 8.66 0 0 1-2.72 1.04 4.29 4.29 0 0 0-7.3 3.91 12.17 12.17 0 0 1-8.84-4.48 4.28 4.28 0 0 0 1.33 5.72 4.26 4.26 0 0 1-1.94-.54v.05a4.29 4.29 0 0 0 3.44 4.2 4.3 4.3 0 0 1-1.93.07 4.29 4.29 0 0 0 4 2.98A8.6 8.6 0 0 1 2 19.54 12.14 12.14 0 0 0 8.29 21c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.35-.02-.53A8.36 8.36 0 0 0 22.46 6Z"/></svg>
+                </a>
+                <a class="social-icon instagram" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visit GreenRoots on Instagram">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 7.2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6Zm0 7.92a3.12 3.12 0 1 1 0-6.24 3.12 3.12 0 0 1 0 6.24ZM17.67 6.3a1.12 1.12 0 1 0 0 2.24 1.12 1.12 0 0 0 0-2.24ZM20 12c0-1.43-.04-2.86-.12-4.28-.08-1.32-.47-2.21-.99-2.77-.52-.56-1.23-.9-2.14-1C14.98 3.55 13.55 3.5 12 3.5s-2.98.05-4.75.45c-.91.1-1.62.44-2.14 1-.52.56-.91 1.45-.99 2.77C2.04 9.14 2 10.57 2 12s.04 2.86.12 4.28c.08 1.32.47 2.21.99 2.77.52.56 1.23.9 2.14 1 1.77.4 3.2.45 4.75.45s2.98-.05 4.75-.45c.91-.1 1.62-.44 2.14-1 .52-.56.91-1.45.99-2.77C21.96 14.86 22 13.43 22 12Zm-2 5.28c-.06.9-.34 1.4-.56 1.71-.24.34-.56.66-1.12.98-.57.33-1.18.47-1.96.53-1.22.1-1.68.12-4.36.12s-3.14-.02-4.36-.12c-.78-.06-1.39-.2-1.96-.53-.56-.32-.88-.64-1.12-.98-.22-.31-.5-.81-.56-1.71-.09-1.17-.12-1.53-.12-4.16s.03-2.99.12-4.16c.06-.9.34-1.4.56-1.71.24-.34.56-.66 1.12-.98.57-.33 1.18-.47 1.96-.53C8.86 3.5 9.32 3.48 12 3.48s3.14.02 4.36.12c.78.06 1.39.2 1.96.53.56.32.88.64 1.12.98.22.31.5.81.56 1.71.09 1.17.12 1.53.12 4.16s-.03 2.99-.12 4.16Z"/></svg>
+                </a>
+            </div>
+        </div>
         <div class="footer-bottom">
             <p>&copy; 2026 GreenRoots NPO. All Rights Reserved. | Reg. NPO 245-678</p>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="js/main.js"></script>
 
 </body>
